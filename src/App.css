@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Righteous', cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.home,
+.contact,
+.createdeck,
+.leaderBoard,
+.dosdecarte,
+.catalogue {
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  height: 90vh;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 3rem;
 }
 
-.App-link {
-  color: #61dafb;
+.home {
+  background-image: url('./images/img3.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.catalogue {
+  background-image: url('./images/img4.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
 }
+
+.createdeck {
+  background-image: url('./images/img7.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.leaderBoard{
+  background-image: url('./images/img1.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.contact{
+  background-image: url('./images/img6.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.dosdecarte{
+  background-image: url('./images/img2.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+/* .video-container{
+  width: 50vw;
+  height: 50vh;
+}
+    
+iframe {
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  width: 50vw;
+  height: 50vh;
+  transform: translate(-50%, -50%);
+} */
