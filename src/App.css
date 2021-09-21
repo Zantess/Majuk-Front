@@ -107,13 +107,13 @@ body{
   color:whitesmoke;
   width: 20%;
   height: 10%;
-  border: 4px solid #18fff3;
-  background-color: #18fff3;
+  border: 4px solid #00cf9b;
+  background-color: #00cf9b;
   transition:ease .15s;
 
 }
 .buttons:hover{
-  border: 4px solid #18fff3;
+  border: 4px solid #00cf9b;
   background-color: transparent;
   cursor: pointer;
   /* transform: scale(1.1); */
@@ -180,7 +180,7 @@ body{
   color:whitesmoke;
   background:transparent;
   border:0;
-  border-bottom:3px solid #18fff3;
+  border-bottom:3px solid #00cf9b;
   transition:ease .2s;
   width: 25%;
   
