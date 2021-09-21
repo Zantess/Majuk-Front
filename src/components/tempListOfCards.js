@@ -58,4 +58,24 @@ export const test = [
         'desc': "Test",
         'effect': 'Aucun',
         'type': ['Aucun']
+    },
+    {
+        'id': 6,
+        'name': 'qsmlkdsq',
+        'mana': 0,
+        'cost': 0,
+        'HP': 0,
+        'desc': "Test",
+        'effect': 'Aucun',
+        'type': ['Aucun']
+    },
+    {
+        'id': 7,
+        'name': 'skjdlqskjd',
+        'mana': 0,
+        'cost': 0,
+        'HP': 0,
+        'desc': "Test",
+        'effect': 'Aucun',
+        'type': ['Aucun']
     }];

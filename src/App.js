@@ -10,6 +10,7 @@ import DosdeCarte from './pages/DosdeCarte';
 import CreateCards from './components/CreateCards';
 import Collection from './components/Collection';
 import Admin from './pages/Admin';
+import Register from './components/Register';
 
 
 function App() {
@@ -17,14 +18,13 @@ function App() {
     
     <Router>
        <Navbar />
-
        <Switch>
          <Route path='/' exact component={Home} />
          <Route path='/leaderBoard' exact component={LeaderBoard} />
          <Route path='/create' exact component={CreateCards} />
          <Route path='/contact' exact component={Contact} />
          <Route path='/createdeck' exact component={CreatDeck} />
-         <Route path='/catalogue' exact component={Collection} />
+         <Route path='/collection' exact component={Collection} />
          <Route path='/dosdecarte' exact component={DosdeCarte} />
          <Route path='/admin' exact component={Admin} />
        </Switch>
