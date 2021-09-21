@@ -6,15 +6,15 @@ const Card = ({name,type,image,mana,attack,HP,desc,effect}) => {
 
 
     return (
-        <div className="carte"  styles={{backgroundImage :`url(${image})`}}>
-            <img src="./images/cartes/Carte_Modele_Degats.png" alt="Bord de carte"/>
-            <p>{name}</p>
-            <p>{type}</p>
-            <p>{mana}</p>
-            <p>{attack}</p>
-            <p>{HP}</p>
-            <p>{desc}</p>
-            <p>{effect}</p>
+        <div className="carte"  style={{backgroundImage :`url(${image})`}}>
+            <img className="carteBord" src="./images/cartes/Carte_Modele_Degats_ss_icones.png" alt="Bord de carte"/>
+            <p className="carteName">{name}</p>
+            <p className="carteType">{type}</p>
+            <p className="carteMana">{mana}</p>
+            <p className="carteAttack">{attack}</p>
+            <p className="carteHP">{HP}</p>
+            <p className="carteDesc">{desc}</p>
+            <p className="carteEffect">{effect}</p>
         </div>
     )
 }

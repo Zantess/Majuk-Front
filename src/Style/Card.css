@@ -1,12 +1,101 @@
 .carte{
     width: 200px;
     height: 307px;
-    background-color: blue;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.carteBord {
+    position: relative;
+    width: 100%;
+    height: 102%;
+    z-index: 3;
+}
+
+.carteName{
+    position: relative;
+    top: -300px;
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 90%;
+    margin-left: 10%;
+}
+
+.carteMana{
+    position: relative;
+    text-align: left;
+    left: 16px;
+    top: -355px;
+    color:white;
+    z-index: 4;
+}
+
+.carteAttack{
+    position: relative;
+    text-align: left;
+    top: -110px;
+    left: 16px;
+    color: white;
+    z-index: 4;
+}
+
+.carteHP{
+    position: relative;
+    text-align: right;
+    top: -130px;
+    right: 15px;
+    color: white;
+    z-index: 4;
+}
+
+.carteType{
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.4);
+    font-size: 11px;
+    text-align: center;
+    width: 80%;
+    height: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    top: -54px;
+    z-index: 2;
+}
+
+.carteDesc{
+    opacity: 0;
+}
+
+/* .carteText{
+    display: grid;
+    grid-template-areas: "Nom"
+                         "Description"
+                         "Effet";
+    grid-template-rows: 1fr 3fr 1fr;
 
 }
 
-img {
+.Nom{
+    grid-area: Nom;
+    color: blue;
+}
+
+.Description{
+    grid-area: Description;
+    color: blueviolet;
+}
+
+.Effet{
+    grid-area: Effet;
+    color: chartreuse;
+} */
+
+.carteEffect{
     position: relative;
-    width: 100%;
-    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    top: -215px;
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 85%;
+    height:20%;
+    z-index: 1;
 }
