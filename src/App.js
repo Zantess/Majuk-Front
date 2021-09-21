@@ -9,6 +9,8 @@ import CreatDeck from './pages/CreateDeck';
 import DosdeCarte from './pages/DosdeCarte';
 import CreateCards from './components/CreateCards';
 import Collection from './components/Collection';
+import Admin from './pages/Admin';
+
 
 function App() {
   return (
@@ -24,6 +26,7 @@ function App() {
          <Route path='/createdeck' exact component={CreatDeck} />
          <Route path='/catalogue' exact component={Collection} />
          <Route path='/dosdecarte' exact component={DosdeCarte} />
+         <Route path='/admin' exact component={Admin} />
        </Switch>
 
     </Router>

@@ -1,0 +1,12 @@
+.carte{
+    width: 200px;
+    height: 307px;
+    background-color: blue;
+
+}
+
+img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
