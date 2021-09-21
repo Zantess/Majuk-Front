@@ -76,6 +76,15 @@ function Navbar() {
             </Link>
           </li>
           <li>
+          <li className='nav-item'>
+          <Link
+              to='/admin'
+              className='nav-links'
+              onClick={closeMobileMenu}
+            >
+              Admin <i className='fas fa-caret-down' />
+            </Link>
+            </li>
             <Link
               to='/sign-up'
               className='nav-links-mobile'

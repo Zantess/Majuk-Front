@@ -8,6 +8,7 @@ import Contact from './pages/Contact';
 import CreatDeck from './pages/CreateDeck';
 import Catalogue from './pages/Catalogue';
 import DosdeCarte from './pages/DosdeCarte';
+import Admin from './pages/Admin'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
          <Route path='/createdeck' exact component={CreatDeck} />
          <Route path='/catalogue' exact component={Catalogue} />
          <Route path='/dosdecarte' exact component={DosdeCarte} />
+         <Route path='/admin' exact component={Admin} />
        </Switch>
 
     </Router>
