@@ -67,8 +67,6 @@ function Navbar() {
             </Link>
           </li>
           <li className='nav-item'>
-          </li>
-          <li className='nav-item'>
             <Link
               to='/contact'
               className='nav-links'
@@ -77,7 +75,6 @@ function Navbar() {
               Contact
             </Link>
           </li>
-          <li>
           <li className='nav-item'>
           <Link
               to='/admin'
@@ -87,16 +84,11 @@ function Navbar() {
               Admin <i className='fas fa-caret-down' />
             </Link>
             </li>
-            <Link
-              to='/sign-up'
-              className='nav-links-mobile'
-              onClick={closeMobileMenu}>
-              <button className='nav-links-mobile'>Sign Up</button>
-              Sign sqkjdqskjhdsq  sqndskqjdnqskjdnUp
-            </Link>
-          </li>
+            <li className='nav-item'>
+              <Button />
+            </li>
         </ul>
-        <Button />
+        
       </nav>
     </>
   );
