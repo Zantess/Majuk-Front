@@ -1,101 +1,103 @@
 .carte{
     width: 200px;
-    height: 307px;
+    height: 300px;
+    display:  grid;
+    grid-template: 1 2 1;
+    grid-template-areas: "mana   nom     nom"
+                         "image  image  image"
+                         "effet  effet  effet"
+                         "attack type    HP";
+    grid-template-rows: 50px 180px 40px 30px;
+    grid-template-columns: 50px 105px 45px;
     background-size: contain;
     background-repeat: no-repeat;
     text-align: center;
+    border-radius: 2px;
 }
 
 .carteBord {
-    position: relative;
-    width: 100%;
-    height: 102%;
+    position: absolute;
+    width: 200px;
+    height: 307px;
     z-index: 3;
 }
 
 .carteName{
-    position: relative;
-    top: -300px;
-    background-color: rgba(255, 255, 255, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    box-shadow: -10px 6px 8px rgb(32, 32, 32);
+    grid-area: nom;
+    margin-top: 15px;
+    height: 50%;
     width: 90%;
-    margin-left: 10%;
+    border: rgb(197, 155, 65) 2px solid;
+    font-size: 11px;
 }
 
 .carteMana{
-    position: relative;
-    text-align: left;
-    left: 16px;
-    top: -355px;
+    grid-area: mana;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color:white;
     z-index: 4;
 }
 
 .carteAttack{
-    position: relative;
     text-align: left;
-    top: -110px;
-    left: 16px;
+    grid-area: attack;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
     z-index: 4;
 }
 
 .carteHP{
-    position: relative;
-    text-align: right;
-    top: -130px;
-    right: 15px;
+    grid-area: HP;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
     z-index: 4;
 }
 
 .carteType{
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.4);
-    font-size: 11px;
-    text-align: center;
-    width: 80%;
-    height: 10%;
-    margin-left: auto;
-    margin-right: auto;
-    top: -54px;
+    grid-area: type;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    font-size: 10px;
     z-index: 2;
 }
 
 .carteDesc{
+    grid-area: 3/1/5/4;
+    display: flex;
+    justify-content: center;
+    padding-top: 2px;
+    background-color: #f5f5f5;
+    border: rgb(197, 155, 65) 2px solid;
+    box-shadow: -2px -3px 6px rgb(32, 32, 32);
+    font-size: 12px;
     opacity: 0;
+    z-index: 2;
 }
-
-/* .carteText{
-    display: grid;
-    grid-template-areas: "Nom"
-                         "Description"
-                         "Effet";
-    grid-template-rows: 1fr 3fr 1fr;
-
-}
-
-.Nom{
-    grid-area: Nom;
-    color: blue;
-}
-
-.Description{
-    grid-area: Description;
-    color: blueviolet;
-}
-
-.Effet{
-    grid-area: Effet;
-    color: chartreuse;
-} */
 
 .carteEffect{
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    top: -215px;
-    background-color: rgba(255, 255, 255, 0.4);
-    width: 85%;
-    height:20%;
+    /* ligne depart / colonne départ / ligne arrivée / colonne arrivée */
+    grid-area: 3/1/5/4;
+    display: flex;
+    justify-content: center;
+    padding-top: 2px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #f5f5f5;
+    border: rgb(197, 155, 65) 2px solid;
+    box-shadow: -2px -3px 6px rgb(32, 32, 32);
+    font-size: 10px;
     z-index: 1;
 }
