@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../Style/Button.css';
 import { Link } from 'react-router-dom';
 import Register from './Register';
+import Navbar from './Navbar';
 
 
 
@@ -16,9 +17,11 @@ const Trying = () => {
   console.log(visible);
 }
 
+
   while(visible===true){
     return (
       <>
+      <Navbar funcTrying={Trying} />
       <Register func={Trying} visible="true"/>
         <button className='btn' onClick={Trying}>Sign In</button>
       </>
