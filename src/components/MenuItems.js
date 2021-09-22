@@ -3,7 +3,7 @@ export const MenuItems  = [
     
     {
         title: 'Catalogue de cartes',
-        path: '/catalogue',
+        path: '/collection',
         cName: 'dropdown-link'
     },
 

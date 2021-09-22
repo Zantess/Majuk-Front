@@ -7,7 +7,8 @@ export const test = [
         'HP': 0,
         'desc': "Test",
         'effect': 'Aucun',
-        'type': ['Aucun']
+        'type': ['Aucun'],
+        'image': '../images/img1.jpg'
     },
     {
         'id': 1,
@@ -17,7 +18,8 @@ export const test = [
         'HP': 1,
         'desc': "Teqsdqsdqs2",
         'effect': 'Aucun',
-        'type': ['Aucun']
+        'type': ['Aucun'],
+        'image': '../images/img2.jpg'
     },
     {
         'id': 2,
@@ -27,7 +29,8 @@ export const test = [
         'HP': 3,
         'desc': "Tqsdqd3",
         'effect': 'Aucun',
-        'type': ['Aucun']
+        'type': ['Aucun'],
+        'image': '../images/img3.jpg'
     },
     {
         'id': 3,
@@ -37,7 +40,8 @@ export const test = [
         'HP': 0,
         'desc': "Test",
         'effect': 'Aucun',
-        'type': ['Aucun']
+        'type': ['Aucun'],
+        'image': '../images/img4.jpg'
     },
     {
         'id': 4,
@@ -47,7 +51,8 @@ export const test = [
         'HP': 0,
         'desc': "Test",
         'effect': 'Aucun',
-        'type': ['Aucun']
+        'type': ['Aucun'],
+        'image': '../images/img5.jpg'
     },
     {
         'id': 5,
@@ -57,7 +62,8 @@ export const test = [
         'HP': 0,
         'desc': "Test",
         'effect': 'Aucun',
-        'type': ['Aucun']
+        'type': ['Aucun'],
+        'image': '../images/img6.jpg'
     },
     {
         'id': 6,
@@ -67,7 +73,8 @@ export const test = [
         'HP': 0,
         'desc': "Test",
         'effect': 'Aucun',
-        'type': ['Aucun']
+        'type': ['Aucun'],
+        'image': '../images/img7.jpg'
     },
     {
         'id': 7,
@@ -77,5 +84,6 @@ export const test = [
         'HP': 0,
         'desc': "Test",
         'effect': 'Aucun',
-        'type': ['Aucun']
+        'type': ['Aucun'],
+        'image': '../images/img8.jpg'
     }];

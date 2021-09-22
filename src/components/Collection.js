@@ -1,23 +1,47 @@
-import React, {useState} from 'react';
-import {test} from './tempListOfCards'
+import React, { useState } from 'react';
+import { test } from './tempListOfCards'
+import Card from './Card';
 
-// const [deck, setDeck] = useState([]);
 
-// addToDeck = (id) =>{
-//     setDeck([...deck, id])
-// }
 
-export default function Collection (){
-    let temp = '';
-    for(let i=0;i<test.length;i++){
-        temp += `<div class="card" id=${test[i].id}>${test[i].name} </div> `
+
+export default function Collection() {
+    const [deck, setDeck] = useState([]);
+    const addToDeck = async (nameTag, mana) => {
+        
+        await setDeck([...deck, nameTag]);
+        console.log(nameTag);
+        console.log(deck);
     }
-    return(
-        <div className="Collection">
-            <div className="cards" dangerouslySetInnerHTML={{ __html: temp }}>
-            </div>
-            <div className="currentDeck" dangerouslySetInnerHTML={{ __html: temp }}>
 
+
+    return (
+        <div className="Collection">
+            <div className="cards" >
+                {test.map((cards) => {
+                    return (
+
+                        <Card addToDeck={addToDeck} name={cards.name} mana={cards.mana} attack={cards.attack} HP={cards.HP} image={cards.image} type={cards.type} desc={cards.desc} effect={cards.effect} />
+
+                    )
+                })}
+            </div>
+
+
+            <div className="currentDeck" >
+            {deck.map((addedCards) => {
+                    return (
+
+                        <div className="selectedCard">
+
+                            <h1>
+                                {addedCards}
+
+                            </h1>
+
+                        </div>
+                    )
+                })}
             </div>
         </div>
     )

@@ -1,6 +1,7 @@
 .carte{
     width: 200px;
     height: 300px;
+    margin:2%;
     display:  grid;
     grid-template: 1 2 1;
     grid-template-areas: "mana   nom     nom"
