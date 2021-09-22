@@ -11,6 +11,7 @@ import CreateCards from './components/CreateCards';
 import Collection from './components/Collection';
 import Admin from './pages/Admin';
 import Register from './components/Register';
+import FetchDeck from './components/FetchDeck';
 
 
 function App() {
@@ -27,6 +28,8 @@ function App() {
          <Route path='/collection' exact component={Collection} />
          <Route path='/dosdecarte' exact component={DosdeCarte} />
          <Route path='/admin' exact component={Admin} />
+         <Route path='/fetchDeck' exact component={FetchDeck} />
+
        </Switch>
 
     </Router>
