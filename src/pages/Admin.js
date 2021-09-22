@@ -1,19 +1,26 @@
 import React from 'react';
 import Card from '../components/Card'
+import CreateCards from '../components/CreateCards'
 import "../Style/Card.css"
+import "../Style/Admin.css"
 
-export default function Admin() {
+const Admin = ({name,type,image,mana,attack,HP,desc,effect}) => {
 
     return (
         
-        <div>
-            <h1 className='Admin'> Admin</h1>
+        <div className='Admin_fond'>
             
-            <Card name="Cristal de Mana" type={["Artefact","Mana"]} mana='0' attack ='1' HP='1' desc="creature nulle" effect="Ajoute 1 de mana pour ce tour." image ='./images/cartes/00_crital_mana.jpg' />
+            <div className='Container_form'>
+
+                <Card name={name} type={type} mana={mana} attack ={attack} HP={HP} desc={desc} effect={effect} image ={image} />
+
+                <CreateCards className="formCard"/> 
+
+            </div>
+    
 
         </div>
-
-
-
     )
 }
+
+export default Admin;

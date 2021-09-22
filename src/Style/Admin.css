@@ -1,0 +1,30 @@
+.Admin_fond{
+    background-image: url('../images/img4.jpg');
+    height: 95vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.Container_form{
+    display: flex;
+    justify-content: center;
+    column-gap: 3%;
+    align-items: center;
+    background-color: #332e28;
+    width: 70%;
+    height: 60%;
+    z-index: 1;
+    border: 2px solid rgb(0, 231, 181);
+    border-radius : 3px;
+}
+
+.formCard{
+    justify-self: end;
+}
+

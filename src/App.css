@@ -76,15 +76,14 @@ body{
   font-size: 100px;
 }
 .newCard{
-  top:40%;
+  /* top:40%; */
   width: 50%;
   left:25%;
-  margin-left:auto;
-  margin-right:auto;
-  position: absolute;
+  height: 300px;
   text-align:center;
-  background:whitesmoke;
+  /* background:whitesmoke; */
   overflow:hidden;
+  color: rgb(230, 228, 228);
   padding:1px;
 }
 .newCard input{
@@ -95,8 +94,8 @@ body{
   transition: ease .2s;
 }
 .newCard input:hover{
-  color:white;
-  background:#18fff3;
+  /* color:white; */
+  /* background:#18fff3; */
   margin:1vh;
 }
 .buttons{
