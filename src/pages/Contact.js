@@ -1,10 +1,11 @@
 import React from 'react';
+import Formulaire from './Formulaire';
 
 export default function Contact() {
     return (
         
         <>
-            <h1 className='contact'> Contact</h1>
+            <Formulaire />
         </>
     )
 }

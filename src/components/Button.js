@@ -28,8 +28,11 @@ const Trying = () => {
   }
   return (
     <>
+      <Link to='sign-up'>
       <Register func={Trying}/>
       <button className='btn' onClick={Trying}>Sign In</button>
+      </Link>
+      
     </>
   );
   }
