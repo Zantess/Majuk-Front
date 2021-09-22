@@ -22,3 +22,13 @@
     border: 2px solid var(--primary);
     transition: all 0.3s ease-out;
   }
+  /* .newUser{
+    z-index:99;
+    background:blue;
+    height:50%;
+    width:50%;
+    position:absolute;
+    top:0;
+    left:0;
+    color:whitesmoke;
+  } */

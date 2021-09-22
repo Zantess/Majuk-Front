@@ -9,7 +9,7 @@ export default function Admin() {
         <div>
             <h1 className='Admin'> Admin</h1>
             
-            <Card name="Cristal de Mana" type='["Artefact","Mana"]' mana='0' attack ='1' HP='1' desc="creature nulle" effect="Ajoute 1 de mana pour ce tour." image ='./images/cartes/00_crital_mana.jpg' />
+            <Card name="Cristal de Mana" type={["Artefact","Mana"]} mana='0' attack ='1' HP='1' desc="creature nulle" effect="Ajoute 1 de mana pour ce tour." image ='./images/cartes/00_crital_mana.jpg' />
 
         </div>
 
