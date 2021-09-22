@@ -6,6 +6,8 @@ import { Button } from './Button';
 const url = 'http://localhost:5000/users/register';
 
 
+
+
 export default class Register extends React.Component {
     constructor(props) {
         super(props)
@@ -36,55 +38,73 @@ export default class Register extends React.Component {
             }).catch(error => console.log(error))
     }
 
+
     render() {
-        const { nom, prenom, mail, pseudo, image,  password} = this.state
+        const { nom, prenom, mail, pseudo, image, password } = this.state
+        let visible = this.props.visible;
+
+        const turnOff = () => {
+
+            visible = !visible;
+            console.log(visible);
+            return <Button visible="false" />
+            
+        }
+
         return (
-            <div className="outer" >
-                <div className="middle" >
-                    <div className="inner">
-                    <div className="newUser">
-                        <form onSubmit={this.handleSubmit}>
-                            <label>Nom
-                            <br></br>
-                                <input type="text" name="nom" value={nom} onChange={this.handleChange}></input>
-                            </label>
-                            <br></br>
-                            <label>Prenom
-                            <br></br>
-                                <input type="text" name="prenom" value={prenom} onChange={this.handleChange}></input>
-                            </label>
-                            <br></br>
-                            <label>Pseudo
-                            <br></br>
-                                <input type="text" name="pseudo" value={pseudo} onChange={this.handleChange}></input>
-                            </label>
-                            <br></br>
-                            <label>Mot de passe
-                            <br></br>
-                                <input type="password" name="password" value={password} onChange={this.handleChange}></input>
-                            </label>
-                            <br></br>
-                            <label>Mail
-                            <br></br>
-                                <input type="text" name="mail" value={mail} onChange={this.handleChange}></input>
-                            </label>
-                            <br></br>
-                            <label>Image
-                            <br></br>
-                                <div className="imagesContainer">
-                                    <img src="https://media.hearthpwn.com/attachments/0/48/jaina.png"></img>
-                                    <img src="https://media.hearthpwn.com/attachments/0/48/jaina.png"></img>
-                                    <img src="https://media.hearthpwn.com/attachments/0/48/jaina.png"></img>
-                                    <img src="https://media.hearthpwn.com/attachments/0/48/jaina.png"></img>
-                                </div>
-                            </label>         
-                            <br></br>
-                            <button type="submit" className="buttons">S'INSCRIRE</button>
-                        </form>
+            <>
+            {visible ? (
+                <div className="outer" onClick={this.props.func}>
+
+                    <div className="middle" >
+                        <div className="inner" >
+                            <div className="newUser">
+                                <form onSubmit={this.handleSubmit}>
+                                    <label>Nom{this.props.visible}
+                                        <br></br>
+                                        <input type="text" name="nom" value={nom} onChange={this.handleChange}></input>
+                                    </label>
+                                    <br></br>
+                                    <label>Prenom
+                                        <br></br>
+                                        <input type="text" name="prenom" value={prenom} onChange={this.handleChange}></input>
+                                    </label>
+                                    <br></br>
+                                    <label>Pseudo
+                                        <br></br>
+                                        <input type="text" name="pseudo" value={pseudo} onChange={this.handleChange}></input>
+                                    </label>
+                                    <br></br>
+                                    <label>Mot de passe
+                                        <br></br>
+                                        <input type="password" name="password" value={password} onChange={this.handleChange}></input>
+                                    </label>
+                                    <br></br>
+                                    <label>Mail
+                                        <br></br>
+                                        <input type="text" name="mail" value={mail} onChange={this.handleChange}></input>
+                                    </label>
+                                    <br></br>
+                                    <label>Image
+                                        <br></br>
+                                        <div className="imagesContainer">
+                                            <img src="https://media.hearthpwn.com/attachments/0/48/jaina.png"></img>
+                                            <img src="https://media.hearthpwn.com/attachments/0/48/jaina.png"></img>
+                                            <img src="https://media.hearthpwn.com/attachments/0/48/jaina.png"></img>
+                                            <img src="https://media.hearthpwn.com/attachments/0/48/jaina.png"></img>
+                                        </div>
+                                    </label>
+                                    <br></br>
+                                    <button type="submit" className="buttons">S'INSCRIRE</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                </div>
-            </div>
+            ) : this.props.func
+    }
+            </>
+
         )
     }
 

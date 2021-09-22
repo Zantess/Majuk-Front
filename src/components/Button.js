@@ -19,15 +19,14 @@ const Trying = () => {
   while(visible===true){
     return (
       <>
-      <div onClick={Trying}></div>
-        <Register />
+      <Register func={Trying} visible="true"/>
         <button className='btn' onClick={Trying}>Sign In</button>
       </>
     );
   }
   return (
     <>
-      
+      <Register func={Trying}/>
       <button className='btn' onClick={Trying}>Sign In</button>
     </>
   );
