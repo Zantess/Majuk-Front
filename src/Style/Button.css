@@ -1,7 +1,7 @@
 :root {
     --primary: #00cf9b;
 }
-
+@media screen and (min-width: 960px){
 .btn {
     padding: 8px 20px;
     border-radius: 4px;
@@ -21,6 +21,31 @@
     border-radius: 4px;
     border: 2px solid var(--primary);
     transition: all 0.3s ease-out;
+  }
+}
+  @media screen and (max-width: 960px){
+    .btn {
+      text-align: center;
+      padding: 2rem;
+      display: table;
+      margin:0;
+      width:100%;
+      outline: none;
+      border: none;
+      font-size: 18px;
+      color: #fff;
+      cursor: pointer;
+      background-color: #18fff3;
+    }
+    .btn:hover {
+      transition: all 0.3s ease-out;
+      background-color: #1dd1c8;
+      color: #fff;
+      border-radius: 0px  !important;
+      border: 0px solid var(--primary);
+      transition: all 0.3s ease-out;
+      /* transition: all 0.3s ease-out; */
+    }
   }
   /* .newUser{
     z-index:99;
