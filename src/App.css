@@ -153,6 +153,7 @@ body{
   width: 50px;
 }
 .inner {
+  z-index:3;
   -webkit-box-shadow: 0px 0px 28px -5px #000000; 
   box-shadow: 0px 0px 28px -5px #000000;
   font-size: 1.3rem;
@@ -249,6 +250,22 @@ body{
   background:red;
   right:0;
   color:whitesmoke;
+}
+.cross{
+  display: flex;
+  float: right;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+.clickEvent{
+  position:absolute;
+  background:RED;
+  top:0;
+  left:0;
+  z-index:-1;
+  height:100%;
+  width:100%;
 }
 .currentDeck .card {
   display: inline !important;
