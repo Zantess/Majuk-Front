@@ -21,7 +21,6 @@ const Trying = () => {
   while(visible===true){
     return (
       <>
-      <Navbar funcTrying={Trying} />
       <Register func={Trying} visible="true"/>
         <button className='btn' onClick={Trying}>Sign In</button>
       </>
