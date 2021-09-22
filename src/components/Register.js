@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import '../App.css';
 import { Button } from './Button';
+import Cross from '../images/Cross2.png';
 
 const url = 'http://localhost:5000/users/register';
 
@@ -58,7 +59,7 @@ export default class Register extends React.Component {
 
                     <div className="middle" >
                         <div className="inner" >
-                            <img className="cross" onClick={this.props.func} src="../images/Cross2.png"></img>
+                            <img className="cross" onClick={this.props.func} src={Cross}></img>
                             <div className="newUser">
                                 <form onSubmit={this.handleSubmit}>
                                     <label>Nom
