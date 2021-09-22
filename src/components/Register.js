@@ -61,7 +61,7 @@ export default class Register extends React.Component {
                             <img className="cross" onClick={this.props.func} src="../images/Cross2.png"></img>
                             <div className="newUser">
                                 <form onSubmit={this.handleSubmit}>
-                                    <label>Nom{this.props.visible}
+                                    <label>Nom
                                         <br></br>
                                         <input type="text" name="nom" value={nom} onChange={this.handleChange}></input>
                                     </label>
