@@ -16,10 +16,19 @@ const Trying = () => {
   console.log(visible);
 }
 
+  while(visible===true){
     return (
       <>
-        {visible===true ? <Register click={Trying}/> : ''}
+      <div onClick={Trying}></div>
+        <Register />
         <button className='btn' onClick={Trying}>Sign In</button>
       </>
     );
+  }
+  return (
+    <>
+      
+      <button className='btn' onClick={Trying}>Sign In</button>
+    </>
+  );
   }

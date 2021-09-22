@@ -4,11 +4,7 @@ import '../App.css';
 import { Button } from './Button';
 
 const url = 'http://localhost:5000/users/register';
-let isBanned = 0;
-let score = 0;
-let test = () => {
-    console.log('OUI');
-}
+
 
 export default class Register extends React.Component {
     constructor(props) {
@@ -20,8 +16,8 @@ export default class Register extends React.Component {
             pseudo: '',
             image: '',
             password: '',
-            ban: isBanned,
-            score: score,
+            ban: 0,
+            score: 0,
             admin: Boolean
         }
     }
@@ -35,6 +31,7 @@ export default class Register extends React.Component {
         axios.post(url, this.state)
             .then(res => {
                 console.log(res);
+                console.log('-----------TEST---------')
                 console.log(res.data);
             }).catch(error => console.log(error))
     }
@@ -80,12 +77,9 @@ export default class Register extends React.Component {
                                     <img src="https://media.hearthpwn.com/attachments/0/48/jaina.png"></img>
                                     <img src="https://media.hearthpwn.com/attachments/0/48/jaina.png"></img>
                                 </div>
-                            </label>
-                            
+                            </label>         
                             <br></br>
-                            
-                            
-                            <button type="submit" className="buttons">CRÉER</button>
+                            <button type="submit" className="buttons">S'INSCRIRE</button>
                         </form>
                     </div>
                 </div>
