@@ -159,7 +159,9 @@ body{
   margin:0 auto;
   border-radius: 3px;
   padding: 5px;
-  background: rgb(175, 175, 175);
+  /* background: rgb(175, 175, 175); */
+  background: linear-gradient(0deg, rgb(48, 48, 48) 0%, rgb(75, 75, 75) 100%);
+
   margin-left: auto;
   margin-right: auto;
   width: 50%;
@@ -215,7 +217,7 @@ body{
   
 }
 .imagesContainer > *:hover{
-  background:rgba(41, 41, 41, 0.267);
+  background:rgba(136, 136, 136, 0.267);
   border-radius:2px;  
   
 }
