@@ -18,7 +18,7 @@ export default class Register extends React.Component {
             password: '',
             ban: 0,
             score: 0,
-            admin: Boolean
+            admin: 0
         }
     }
     handleChange = event => {
