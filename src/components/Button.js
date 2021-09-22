@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../Style/Button.css';
 import { Link } from 'react-router-dom';
 import Register from './Register';
+import Navbar from './Navbar';
 
 
 
@@ -15,6 +16,7 @@ const Trying = () => {
   setVisible(!visible);
   console.log(visible);
 }
+
 
   while(visible===true){
     return (
