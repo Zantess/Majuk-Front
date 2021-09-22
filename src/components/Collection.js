@@ -2,9 +2,6 @@ import React, { useState } from 'react';
 import { test } from './tempListOfCards'
 import Card from './Card';
 import Swal from 'sweetalert2'
-import { Fetch } from './fetch';
-
-
 
 
 export default function Collection() {
