@@ -31,7 +31,6 @@ const url = 'http://localhost:5000/cards';
     return (
         <div className="Collection">
             <button onClick={deleteDeck} >Effacer le deck</button>
-            <Fetch url={url}/>
             
             <div className="cards" >
                 {test.map((cards) => {

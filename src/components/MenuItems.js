@@ -1,6 +1,4 @@
 export const MenuItems  = [
-    
-    
     {
         title: 'Catalogue de cartes',
         path: '/collection',
@@ -23,6 +21,5 @@ export const MenuItems  = [
         path: '/create',
         cName : 'dopdown-link'
     }
-
 ]
 
