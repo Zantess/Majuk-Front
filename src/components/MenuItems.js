@@ -20,7 +20,7 @@ export const MenuItems  = [
     {
         title: 'Création de carte',
         path: '/create',
-        cName : 'dopdown-link'
+        cName: 'dropdown-link'
     }
 ]
 
