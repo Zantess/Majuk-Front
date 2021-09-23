@@ -13,11 +13,11 @@ import Admin from './pages/Admin';
 import Register from './components/Register';
 import FetchDeck from './components/FetchDeck';
 
-
 function App() {
   return (
-    
+    <>
     <Router>
+      
        <Navbar />
        <Switch>
          <Route path='/' exact component={Home} />
@@ -33,6 +33,7 @@ function App() {
        </Switch>
 
     </Router>
+    </>
   );
 }
 

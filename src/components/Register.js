@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import '../App.css';
+import '../Style/Register.css';
 import { Button } from './Button';
 import Cross from '../images/Cross2.png';
 

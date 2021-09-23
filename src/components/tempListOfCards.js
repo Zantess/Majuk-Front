@@ -52,7 +52,7 @@ export const test = [
         'desc': "Test",
         'effect': 'Aucun',
         'type': ['Aucun'],
-        'image': '../images/img5.jpg'
+        'image': 'QzpcZmFrZXBhdGhcQWxpY2VKZXQuanBn'
     },
     {
         'id': 5,

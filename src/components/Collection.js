@@ -5,44 +5,39 @@ import Swal from 'sweetalert2'
 import { Howl } from 'howler';
 import uiHover from '../sounds/uiHover.mp3';
 import deckFull from '../sounds/deckFull.mp3';
-import addedToDeck from '../sounds/addedToDeck.mp3'
+import addedToDeck from '../sounds/addedToDeck.mp3';
+import soundCollection from '../sounds/Collection.mp3'
+import '../Style/collection.css'
 
-
-
-const audio = [
-    { sound: uiHover, label: "Hover click sound" }
-]
 
 export default function Collection() {
+
     const [deck, setDeck] = useState([]);
     const deleteDeck = () => {
         setDeck([])
     }
+
     const addToDeck = async (nameTag, mana) => {
 
-
         if (deck.length === 20) {
-            let sound = new Audio(deckFull);
-            sound.play();
+            let soundFull = new Audio(deckFull);
+            soundFull.play();
             Swal.fire({
                 icon: 'error',
                 title: 'IMPOSSIBLE',
                 text: 'Votre deck contient déjà le maximum de cartes !',
             })
         } else {
-            let sound = new Audio(addedToDeck);
-            sound.play();
-            await setDeck([...deck, nameTag]);
-            console.log(nameTag);
-            console.log(deck);
+            let soundToDeck = new Audio(addedToDeck);
+            soundToDeck.play();
+            setDeck([...deck, nameTag]);
+
         }
     }
     const hoverSound = () => {
         let sound = new Audio(uiHover);
         sound.play();
     }
-
-
 
     const url = 'http://localhost:5000/cards';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import '../App.css';
+import '../Style/CreateCard.css';
 import Card from './Card'
 
 const url = 'http://localhost:5000/cards';
@@ -41,7 +41,7 @@ export default class CreateCards extends React.Component {
           const {name, mana, attack, HP, desc, effect, type, image} = this.state
         return (
             <div className="newCard">
-            <Card  addToDeck={fix} name={name} mana={mana} attack={attack} HP={HP} image={image} type={type} desc={desc} effect={effect} />
+            <Card  hoverSound={fix} addToDeck={fix} name={name} mana={mana} attack={attack} HP={HP} image={image} type={type} desc={desc} effect={effect} />
                 
             <form onSubmit={this.handleSubmit}>
                 <label>Nom de carte:

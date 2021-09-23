@@ -1,0 +1,54 @@
+.collection{
+ 
+    height:100%;
+    width:100%;
+  }
+  
+.cards{
+    padding: 5px;
+    height:100%;
+    width:80%;
+    /* background:yellow; */
+    text-align:center;
+    display:flex;
+    min-width: 0;
+    overflow: auto;
+    position: absolute;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+  }
+  
+  .card{
+    cursor:pointer;
+    position:relative;
+    margin: 20px;
+    display: block;
+    height:307px;
+    min-width:200px;
+    max-width:200px;
+    flex: 1;
+    background:blue;
+    color:whitesmoke; 
+    text-align:center; 
+  
+  }
+  .currentDeck{
+    flex-wrap: wrap;
+    position:relative;
+    display: flex;
+    float: right;
+    height: 100%;
+    width:20%;
+    right:0;
+    color:whitesmoke;
+  }
+  
+  .currentDeck .card {
+    display: inline !important;
+  }
+  .selectedCard{
+    border:2px solid whitesmoke;
+    width:100%;
+    background-image: linear-gradient(0deg, rgb(36, 39, 41) 0%, rgb(56, 61, 64) 100%);
+  }
