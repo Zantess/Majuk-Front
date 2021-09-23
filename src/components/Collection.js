@@ -25,9 +25,9 @@ export default function Collection() {
     }
 
     const url = 'http://localhost:5000/cards';
-    
+
     return (
-        <div className="Collection">
+        <div className="collection">
             <button onClick={deleteDeck} >Effacer le deck</button>
 
             <div className="cards" >
