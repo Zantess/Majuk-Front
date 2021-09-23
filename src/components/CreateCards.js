@@ -32,12 +32,16 @@ export default class CreateCards extends React.Component {
               console.log(res.data);
           }).catch(error => console.log(error))
       }
+
     
       render() {
+        const fix = () => {
+          console.log('fixed');
+        }
           const {name, mana, attack, HP, desc, effect, type, image} = this.state
         return (
             <div className="newCard">
-            <Card  name={name} mana={mana} attack={attack} HP={HP} image={image} type={type} desc={desc} effect={effect} />
+            <Card  addToDeck={fix} name={name} mana={mana} attack={attack} HP={HP} image={image} type={type} desc={desc} effect={effect} />
                 
             <form onSubmit={this.handleSubmit}>
                 <label>Nom de carte:
