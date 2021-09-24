@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Card from '../components/Card'
-import CreateCards from '../components/CreateCards'
 import "../Style/Card.css"
 import "../Style/Admin.css"
 import axios from 'axios';
+import FormCard from '../components/FormCard';
 
 const url = 'http://localhost:5000/cards';
 
@@ -27,11 +27,28 @@ const Admin = () => {
         hero: ['Divinite']
     })
 
+    const [formKey,setFormKey] = useState(0);
+    const [imgPath,setImgPath] = useState('');
+    const [imgName,setImgName] = useState('');
+
+    const handleImage = e =>{
+        setState({...state, image : URL.createObjectURL(e.target.files[0])})
+        setImgName(e.target.files[0].name);
+        setImgPath(e.target.files[0])
+        console.log(imgName);
+        console.log(imgPath);
+    }
+
     const handleChange = e => {        
         if(e.target.name == 'type1'){
             setState({...state , [e.target.name] : e.target.value, ['ssType'] : state[e.target.value][0]});
         }else{
-            setState({...state , [e.target.name] : e.target.value});
+            if(e.target.name == 'image'){
+                handleImage(e);
+            }
+            else{
+                setState({...state , [e.target.name] : e.target.value});
+            }            
         }
     }
 
@@ -42,16 +59,21 @@ const Admin = () => {
     }
 
     const Submit = (e) => {
-        e.preventDefault();
-        // console.log('coucou');
-        // console.log(state);
-        // console.log({...state , type: [state.type1,state.ssType]});
 
-        axios.post(url, {...state , type: [state.type1,state.ssType]})
+        e.preventDefault();
+        axios.post(url, {...state , type: [state.type1,state.ssType], image:`../images/cartes/${imgName}`})
             .then(res => {
                 console.log(res);
                 console.log(res.data);
             }).catch(error => console.log(error))
+
+        axios.post('../images/cartes/',imgPath)
+        .then(res => {
+            console.log(res);
+            console.log(res.data);
+        }).catch(error => console.log(error))
+        setFormKey(formKey + 1);
+        
     }
 
 
@@ -64,7 +86,7 @@ const Admin = () => {
                 <Card state={state} />
 
 
-                <CreateCards className="formCard" handleChange={handleChange} affiche={afficheSousType} Submit={Submit}/> 
+                <FormCard key={formKey} className="formCard" handleChange={handleChange} affiche={afficheSousType} Submit={Submit} /> 
 
             </div>
     
