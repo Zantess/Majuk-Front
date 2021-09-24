@@ -17,14 +17,17 @@ export default function Collection() {
     const [muted, setmuted] = useState(false)
     const [deck, setDeck] = useState([]);
     const deleteDeck = () => {
-        setDeck()
+        setDeck([])
     }
 
-    const addToDeck = async (name,type,image,mana,attack,HP,desc,effect) => {  //add cards to deck
+    const addToDeck = async (name, type, image, mana, attack, HP, desc, effect) => {  //add cards to deck
 
         if (deck.length === 20) {
             let soundFull = new Audio(deckFull);
-            soundFull.play();
+            if (muted === false) {
+                soundFull.play();
+            }
+
             Swal.fire({
                 icon: 'error',
                 title: 'IMPOSSIBLE',
@@ -32,17 +35,19 @@ export default function Collection() {
             })
         } else {
             let soundToDeck = new Audio(addedToDeck);
-            soundToDeck.play();
-            setDeck([...deck, [name,type,image,mana,attack,HP,desc,effect]]);
+            if (muted === false) {
+                soundToDeck.play();
+            }
+            setDeck([...deck, [name, type, image, mana, attack, HP, desc, effect]]);
 
         }
     }
     const hoverSound = () => { //audio on mouse hover
         let sound = new Audio(uiHover);
-        if(muted === true){
-            return null
-        }else{
-            sound.play()    
+        if (muted === true) {
+            return null;
+        } else {
+            sound.play()
         }
 
 
@@ -55,10 +60,10 @@ export default function Collection() {
 
     return (
         <div className="collection">
-            {deck.length===20 ? <SaveDeck deck={deck} /> : ''}
+            {deck.length === 20 ? <SaveDeck deck={deck} /> : ''}
             <button onClick={deleteDeck} >Effacer le deck</button>
-            <div className="muteButton"><img src={muted ? Mute : unMute} onClick={muteSound}/></div>
-            
+            <div className="muteButton"><img src={muted ? Mute : unMute} onClick={muteSound} /></div>
+
 
             <div className="cards" >
                 {test.map((cards) => {

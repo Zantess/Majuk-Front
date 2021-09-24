@@ -31,11 +31,12 @@ export default class SaveDeck extends React.Component {
 
         render(){
             return(
-                <>
-                <form onSubmit={() => this.handleSubmit()}>
-                    <button type="submit">{console.log(this.deck)}</button>
-                </form>
-                </>
+                // <>
+                // <form onSubmit={() => this.handleSubmit()}>
+                //     <button type="submit">{console.log(this.deck)}</button>
+                // </form>
+                // </> 
+                null
             )
         }
 }
