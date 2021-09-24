@@ -20,7 +20,7 @@
     overflow: hidden;
 }
 .carte:hover{
-    box-shadow: 0px 0px 0px 7px #b1ccc5; 
+    box-shadow: 0px 0px 0px 7px #00cf9b; 
     animation: cardHover .5s infinite alternate;
 }
 .carte:active{
