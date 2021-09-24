@@ -18,16 +18,14 @@ const Admin = () => {
         effect:'',
         desc:'',
         image:'',
+        type:[],
         type1:'creature',
-        ssType:'',
+        ssType:'humain',
         creature: ['humain', 'Elementaire', 'Morts-vivants', 'Dragon','Bête'],
         sort: ['Degat', 'Soin', 'Buff', 'Persistant','Contrôle'],
         artefact: ['Equipement','Piege'],
         hero: ['Divinite']
     })
-
-    const [type1, setType1] = useState('creature');
-
 
     const handleChange = e => {        
         if(e.target.name == 'type1'){
@@ -43,9 +41,11 @@ const Admin = () => {
         ))
     }
 
-    const handleSubmit = event => {
-        event.preventDefault();
-        console.log(this.state)
+    const Submit = (e) => {
+        e.preventDefault();
+        // console.log('coucou');
+        // console.log(state);
+        // console.log({...state , type: [state.type1,state.ssType]});
 
         axios.post(url, {...state , type: [state.type1,state.ssType]})
             .then(res => {
@@ -64,7 +64,7 @@ const Admin = () => {
                 <Card state={state} />
 
 
-                <CreateCards className="formCard" handleChange={handleChange} affiche={afficheSousType} submit={handleSubmit}/> 
+                <CreateCards className="formCard" handleChange={handleChange} affiche={afficheSousType} Submit={Submit}/> 
 
             </div>
     

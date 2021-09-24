@@ -7,32 +7,14 @@ const url = 'http://localhost:5000/cards';
 export default class CreateCards extends React.Component {
     constructor(props) {
         super(props)
-        // this.state = {
-        //     name: '',
-        //     image: '',
-        //     type: [],
-        //     mana: Number,
-        //     attack: Number,
-        //     HP: Number,
-        //     desc: '',
-        //     effect: '',
-        //     type1: 'creature',
         }
-        // this.afficheSousType = this.afficheSousType.bind(this)
-    
-
-    // handleChange = event => {
-    //     this.setState({ [event.target.name]: event.target.value, [event.target.type1]: event.target.value })
-    // }
-    // const { name, mana, attack, HP, desc, effect, type, image, type1 } = this.state
 
     render() {
-        
 
         return (
             <div className="newCard">
 
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={(e)=>{this.props.Submit(e)}}>
                     <table>
                         <tr>
                             <td>

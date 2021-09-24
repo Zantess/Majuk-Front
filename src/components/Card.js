@@ -6,7 +6,7 @@ const Card = (props) => {
     // console.log(type);
     
     //console.log(props);
-    console.log(props.state);
+    // console.log(props.state);
     
     const {name,type1,ssType,image,mana,attack,HP,desc,effect}  = props.state;
 
