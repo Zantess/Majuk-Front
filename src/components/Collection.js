@@ -7,17 +7,20 @@ import uiHover from '../sounds/uiHover.mp3';
 import deckFull from '../sounds/deckFull.mp3';
 import addedToDeck from '../sounds/addedToDeck.mp3';
 import soundCollection from '../sounds/Collection.mp3'
-import '../Style/collection.css'
+import '../Style/Collection.css'
+import SaveDeck from './SaveDeck';
+import Mute from '../images/mute.png';
+import unMute from '../images/unMute.png'
 
 
 export default function Collection() {
-
+    const [muted, setmuted] = useState(false)
     const [deck, setDeck] = useState([]);
     const deleteDeck = () => {
-        setDeck([])
+        setDeck()
     }
 
-    const addToDeck = async (nameTag, mana) => {
+    const addToDeck = async (name,type,image,mana,attack,HP,desc,effect) => {  //add cards to deck
 
         if (deck.length === 20) {
             let soundFull = new Audio(deckFull);
@@ -30,20 +33,32 @@ export default function Collection() {
         } else {
             let soundToDeck = new Audio(addedToDeck);
             soundToDeck.play();
-            setDeck([...deck, nameTag]);
+            setDeck([...deck, [name,type,image,mana,attack,HP,desc,effect]]);
 
         }
     }
-    const hoverSound = () => {
+    const hoverSound = () => { //audio on mouse hover
         let sound = new Audio(uiHover);
-        sound.play();
+        if(muted === true){
+            return null
+        }else{
+            sound.play()    
+        }
+
+
+    }
+    const muteSound = () => {
+        setmuted(!muted);
     }
 
     const url = 'http://localhost:5000/cards';
 
     return (
         <div className="collection">
+            {deck.length===20 ? <SaveDeck deck={deck} /> : ''}
             <button onClick={deleteDeck} >Effacer le deck</button>
+            <div className="muteButton"><img src={muted ? Mute : unMute} onClick={muteSound}/></div>
+            
 
             <div className="cards" >
                 {test.map((cards) => {
@@ -63,7 +78,8 @@ export default function Collection() {
                         <div className="selectedCard">
 
                             <h1>
-                                {addedCards}
+                                {addedCards[0]}
+                                {console.log(addedCards)}
 
                             </h1>
 

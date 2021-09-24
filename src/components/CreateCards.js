@@ -10,7 +10,7 @@ export default class CreateCards extends React.Component {
         super(props)
     this.state = {
         name:'',
-        image:'',
+        image:Buffer,
         type:[],
         mana: Number,
         attack:Number,
@@ -43,12 +43,12 @@ export default class CreateCards extends React.Component {
             <div className="newCard">
             <Card  hoverSound={fix} addToDeck={fix} name={name} mana={mana} attack={attack} HP={HP} image={image} type={type} desc={desc} effect={effect} />
                 
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit} method="POST" encType="multipart/form-data">
                 <label>Nom de carte:
                 <input type="text" name="name" value={name} onChange={this.handleChange}></input>
                 </label>
                 <label>Image:
-                <input type="file" name="image" value={image} onChange={this.handleChange}></input>
+                <input type="file" name="image" id="image" value={image} onChange={this.handleChange}></input>
                 </label>
                 <br></br>
                 <label>Coût en mana:

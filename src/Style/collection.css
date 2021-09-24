@@ -1,14 +1,39 @@
+body{
+  background-image: url('../images/img6.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
 .collection{
- 
+    /* background-image: url('../images/img6.jpg'); */
     height:100%;
     width:100%;
   }
-  
+ .muteButton{
+   height:5%;
+   width:5%;
+   cursor: pointer;
+   transition: ease .05s;
+   position:sticky;
+   bottom: 5%;
+   left: 5%;
+ }
+ .muteButton:hover{
+  transform: scale(1.1);
+}
+.muteButton:active{
+  transform: scale(1);
+} 
+ .muteButton > *{
+   height:100%;
+   width:100%;
+   position:relative;
+ }
 .cards{
     padding: 5px;
     height:100%;
     width:80%;
-    /* background:yellow; */
+    background:none;
     text-align:center;
     display:flex;
     min-width: 0;
@@ -28,7 +53,6 @@
     min-width:200px;
     max-width:200px;
     flex: 1;
-    background:blue;
     color:whitesmoke; 
     text-align:center; 
   
